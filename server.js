@@ -22,6 +22,7 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 
 // Middleware
 app.use(methodOverride('_method'));
+app.use(express.static('public'));
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: false })); 
 app.use('/pets', petsController);
@@ -29,6 +30,20 @@ app.use('/possible', possibleController);
 app.use('/friends', friendsController);
 
 // Route
+// Seed Route
+// const Pet = require('./models/pet.js');
+// const petSeed = require('./models/petSeed.js');
+// app.get('/seed', (req, res) => {
+//     Pet.deleteMany({}, (error, pets) => {
+//         // All things in database have been deleted at this point.
+//         Pet.create(petSeed, (error, newPets) => {
+//             // Pets have been created
+//             console.log(newPets);
+//         });
+//     });
+// });
+
+// Landing Page
 app.get('/', (req, res) => {
     res.render('landing.ejs');
 });

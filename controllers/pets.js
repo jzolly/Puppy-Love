@@ -3,9 +3,11 @@ const express = require('express');
 const router = express.Router();
 const Pet = require('../models/pet.js');
 
+
 // Routes
 // I
 router.get('/', (req, res) => {
+    // Get all pets where
     Pet.find({}, (err, foundPets) => {
         res.render('pets/index.ejs', {
             pets: foundPets

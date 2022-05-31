@@ -12,10 +12,6 @@ const petSchema = new Schema({
     size: Number,
     personality: String,
     energy: Number,
-    vaccine: Boolean,
-    explOne: String,
-    socialized: Boolean,
-    explTwo: String, 
     about: String,
     locations: String,
 });
