@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 // Initialize shortcute
 const Schema = mongoose.Schema;
 // Initialize Schema
-const friendSchema = new Schema({
+const possibleSchema = new Schema({
     name: String,
     img: String,
     gender: String,
@@ -20,6 +20,6 @@ const friendSchema = new Schema({
     locations: String,
 });
 // Export Models
-const Friend = mongoose.model('Friend', friendSchema);
+const Possible = mongoose.model('possible', possibleSchema);
 
-module.exports = Friend;
+module.exports = Possible;

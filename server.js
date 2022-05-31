@@ -3,6 +3,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const petsController = require('./controllers/pets.js');
+const friendsController = require('./controllers/friends.js');
+const possibleController = require('./controllers/possible.js');
 const app = express();
 const morgan = require('morgan');
 require('dotenv').config();
@@ -23,6 +25,8 @@ app.use(methodOverride('_method'));
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: false })); 
 app.use('/pets', petsController);
+app.use('/possible', possibleController);
+app.use('/friends', friendsController);
 
 // Route
 app.get('/', (req, res) => {
