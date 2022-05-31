@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Show Page</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/friends">Furever Friends</a>
+                </li>
+                <li>
+                    <a href="/pets">Pets</a>
+                </li>
+                <li>
+                    <a href="/possible">Pawsible Friends</a>
+                </li>
+                <li><a href="/pets/new">Add Pet</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2><%= pets.name %> </h2>
+            <section>
+                <a href="/pets/<%= pets._id %>/edit">Edit</a>
+                <form action="/pets/<%= pets._id %>?_method=DELETE" method="POST">
+                    <input type="submit" value="Delete Pet" />
+                </form>
+            </section>
+            <img src="<%= pets.img %>" alt="my good boi" height="400px"/> <br/>
+            <ul>
+                <li>Breed: <%= pets.breed %> </li><br/>
+                <li>Age: <%= pets.age %> </li><br/>
+                <li>Energy: <%= pets.energy %> /5</li><br/>
+                <li>Personality: <%= pets.personality %> </li><br/>
+                <li>Doggo Bio: <%= pets.about %> </li><br/>
+                <li>Favorite Play Places: <%= pets.locations %> </li><br/>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

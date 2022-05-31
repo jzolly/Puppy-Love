@@ -19,7 +19,18 @@ router.get('/new', (req, res) => {
 });
 
 // D
+router.delete('/:id', (req, res) => {
+    Pet.findByIdAndDelete(req.params.id, () => {
+        res.redirect('/pets');
+    });
+});
 // U
+router.put('/:id', (req, res) => {
+    Pet.findByIdAndUpdate(req.params.id, req.body, () => {
+        res.redirect('/pets');
+    });
+});
+
 // C
 router.post('/', (req, res) => {
     Pet.create(req.body, (err, createdPet) => {
@@ -27,7 +38,21 @@ router.post('/', (req, res) => {
     });
 });
 // E
+router.get('/:id/edit', (req, res) => {
+    Pet.findById(req.params.id, (err, foundPet) => {
+        res.render('pets/edit.ejs', {
+            pet: foundPet
+        });
+    });
+});
 // S
+router.get('/:id', (req,res) => {
+    Pet.findById(req.params.id, (err, foundPet) => {
+        res.render('pets/show.ejs', {
+            pets: foundPet
+        });
+    });
+});
 
 // Export Routes
 module.exports = router;

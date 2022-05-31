@@ -28,6 +28,14 @@
     </header>
     <main>
         <h1>My Pets</h1>
+        <ul>
+            <% for(let i=0; i < pets.length; i++){ %>
+                <li>
+                    <a href="/pets/<%= pets[i]._id %>"><%= pets[i].name %></a> <br/>
+                    <img  src="<%= pets[i].img %>" height="200px"/>
+                </li>
+           <% } %> 
+        </ul>
     </main>
 
 </body>

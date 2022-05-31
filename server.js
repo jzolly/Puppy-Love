@@ -22,7 +22,7 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 app.use(methodOverride('_method'));
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: false })); 
-app.use('/pets', petsController)
+app.use('/pets', petsController);
 
 // Route
 app.get('/', (req, res) => {
