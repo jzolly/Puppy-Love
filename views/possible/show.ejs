@@ -8,7 +8,16 @@
         <%- include('../partials/nav.ejs') %>
     </header>
     <main>
-        <h1>Possible Show</h1>
+        <h1><%= possible.name %> </h1>
+        <img src="<%= possible.img %>" alt="my good boi" height="400px"/> <br/>
+        <ul>
+            <li>Breed: <%= possible.breed %> </li><br/>
+            <li>Age: <%= possible.age %> </li><br/>
+            <li>Energy: <%= possible.energy %> /5</li><br/>
+            <li>Personality: <%= possible.personality %> </li><br/>
+            <li>Doggo Bio: <%= possible.about %> </li><br/>
+            <li>Favorite Play Places: <%= possible.locations %> </li><br/>
+        </ul>
     </main>
 </body>
 </html>

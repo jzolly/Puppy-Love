@@ -31,17 +31,19 @@ app.use('/friends', friendsController);
 
 // Route
 // Seed Route
-// const Pet = require('./models/pet.js');
-// const petSeed = require('./models/petSeed.js');
-// app.get('/seed', (req, res) => {
-//     Pet.deleteMany({}, (error, pets) => {
-//         // All things in database have been deleted at this point.
-//         Pet.create(petSeed, (error, newPets) => {
-//             // Pets have been created
-//             console.log(newPets);
-//         });
-//     });
-// });
+const Pet = require('./models/pet.js');
+const petSeed = require('./models/possibleSeed.js');
+const Friend = require('./models/friend.js');
+app.get('/seed', (req, res) => {
+    Friend.deleteMany({}, (error, friends) => {});
+    Pet.deleteMany({}, (error, pets) => {
+        // All things in database have been deleted at this point.
+        Pet.create(petSeed, (error, newPets) => {
+            // Pets have been created
+            console.log(newPets);
+        });
+    });
+});
 
 // Landing Page
 app.get('/', (req, res) => {

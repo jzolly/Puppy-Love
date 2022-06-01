@@ -16,6 +16,12 @@
                     <a href="/possible/<%= possible[i]._id %>"><%= possible[i].name %></a> <br/>
                     <img  src="<%= possible[i].img %>" height="200px"/>
                 </li>
+                <form action='/possible/<%= possible[i]._id %>?_method=DELETE' method="POST" style="display:inline; margin-left:16px;">
+                    <input type="submit" value="X">
+                </form>
+                <form action="/possible/<%= possible[i]._id %>/heart" method="POST" style="display:inline; margin-left:16px;">
+                    <button>Heart</button>
+                </form>
            <% } %> 
         </ul>
     </main>

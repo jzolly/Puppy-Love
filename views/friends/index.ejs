@@ -9,6 +9,15 @@
     </header>
     <main>
         <h1>Fuzzy Friends</h1>
+        <a href="/possible"><button>Find Friends</button></a>
+        <ul>
+            <% for(let i=0; i < friends.length; i++){ %>
+                <li>
+                    <a href="/friends/<%= friends[i]._id %>"><%= friends[i].name %></a> <br/>
+                    <img  src="<%= friends[i].img %>" height="200px"/>
+                </li>
+           <% } %> 
+        </ul>
     </main>
 </body>
 </html>

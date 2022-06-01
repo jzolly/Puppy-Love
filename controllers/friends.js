@@ -6,19 +6,29 @@ const Friend = require('../models/friend.js');
 // Routes
 // I
 router.get('/', (req, res) => {
-    res.render('friends/index.ejs');
+    // Get all pets where
+    Friend.find({}, (err, foundFriends) => {
+        res.render('friends/index.ejs', {
+            friends: foundFriends
+        });
+    });
 });
 
-// N logic from the new ejs pages will need to be written in to the add friend button.  Grab information by id of the added pet.
+// N 
 // Delete
+router.delete('/:id', (req, res) => {
+    Friend.findByIdAndRemove(req.params.id, (err, data) => {
+        res.redirect('/friends')
+    });
+});
 // U
-// C POST route, connected to the add new friend button. this may be some sort of append feature coming from the possible seed data. Logic help.
+// C
 // E
 // Show
 router.get('/:id', (req, res) => {
     Friend.findById(req.params.id, (err, foundFriend) => {
         res.render('friends/show.ejs', {
-            friend: foundFriend
+            friends: foundFriend
         });
     });
 });
