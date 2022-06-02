@@ -5,7 +5,7 @@
 </head>
 <body>
     <header>
-        <%- include('../partials/nav.ejs') %>
+        <%- include('../partials/nav') %>
     </header>
     <main>
         <h1>Fuzzy Friends</h1>
@@ -14,7 +14,7 @@
             <% for(let i=0; i < friends.length; i++){ %>
                 <li>
                     <a href="/friends/<%= friends[i]._id %>"><%= friends[i].name %></a> <br/>
-                    <img  src="<%= friends[i].img %>" height="200px"/>
+                    <img  class="doggo" src="<%= friends[i].img %>" height="200px"/>
                 </li>
            <% } %> 
         </ul>
