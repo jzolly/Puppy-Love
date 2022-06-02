@@ -7,7 +7,7 @@ body {
     font-family: 'Work Sans', sans-serif;
     font-weight: 300;
 }
-
+/* Site-Nav Bar */
 .container {
     width: 97%;
     max-width: 1000px;
@@ -58,12 +58,13 @@ header::after {
 .site-nav a:hover {
     color: rgb(246, 246, 136);
 }
-
+/* Side Nav Bar */
+/* Dog Images */
 .doggo {
     width: 250px;
     height: 250px;
     overflow: hidden;
-    border-radius: 50%;
+    border-radius: 25%;
     border: 3px solid grey;
 }
 #showDog {
@@ -72,6 +73,50 @@ header::after {
     border-radius: 30%;
 
 }
+#my-doggo {
+    border-radius: 50%;
+}
+/* Text Things */
+h1 {
+    color:#0e5d61; 
+}
+
+/* .index-container */
+.index-container {
+    position: relative;
+    overflow: scroll;
+}
+/* Pet Container */
+.pet-display {
+    background:white;
+    max-width: 800px;
+    min-width: 500px;
+    max-height: 600px;
+    min-height: 300px;
+    margin:;
+    padding:;
+    border:2px solid orange;
+    border-radius: ;
+    list-style: none;
+    position: relative;
+    overflow: scroll;
+}
+.pet-display ul {
+}
+.pet-display li {
+    background: rgb(154, 152, 152);
+    border:2px solid red;
+    width: 300px;
+    height: 300px;
+    margin: 1px 0;
+    padding: 1px 0;
+    
+}
+.pet-display a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
 /* .site-nav {
     position: absolute;
     top: 100%;

@@ -11,17 +11,17 @@
         <div class="index-container">
             <h1>Fuzzy Friends</h1>
         <a href="/possible"><button>Find Friends</button></a>
-        <ul>
+        <ul class="pet-display">
             <% for(let i=0; i < friends.length; i++){ %>
                 <li>
                     <a href="/friends/<%= friends[i]._id %>"><%= friends[i].name %></a> <br/>
                     <img  class="doggo" src="<%= friends[i].img %>" height="200px"/>
+                    <section class="tools">
+                        <form action="/friends/<%= friends._id %>?_method=DELETE" method="POST">
+                            <input id="x" type="submit" value="Delete Friend" />
+                        </form>
+                    </section>
                 </li>
-                <section class="tools">
-                    <form action="/friends/<%= friends._id %>?_method=DELETE" method="POST">
-                        <input id="x" type="submit" value="Delete Friend" />
-                    </form>
-                </section>
            <% } %> 
         </ul>
         </div>

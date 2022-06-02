@@ -32,7 +32,7 @@
             <% for(let i=0; i < pets.length; i++){ %>
                 <li>
                     <a href="/pets/<%= pets[i]._id %>"><%= pets[i].name %></a> <br/>
-                    <img class="doggo"  src="<%= pets[i].img %>" height="200px"/>
+                    <img class="doggo" id="my-doggo" src="<%= pets[i].img %>" height="200px"/>
                 </li> 
            <% } %> 
         </ul>

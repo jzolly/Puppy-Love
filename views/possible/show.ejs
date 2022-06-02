@@ -11,7 +11,7 @@
         <section class="showContainer">
             <h1><%= possible.name %> </h1>
             <section class="tools">
-                <form  action='/possible/<%= possible[i]._id %>?_method=DELETE' method="POST" style="display:inline; margin-left:16px;">
+                <form  action='/possible/<%= possible._id %>?_method=DELETE' method="POST" style="display:inline; margin-left:16px;">
                     <input id="x" type="submit" value="X">
                 </form>
             </section>
