@@ -2,6 +2,7 @@
 const express = require('express');
 const router = express.Router();
 const Friend = require('../models/friend.js');
+const Pet = require('../models/pet.js');
 const Possible = require('../models/possible.js');
 const { ObjectId} = require('mongodb');
 

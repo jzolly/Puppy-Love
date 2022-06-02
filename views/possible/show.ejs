@@ -8,9 +8,15 @@
         <%- include('../partials/nav.ejs') %>
     </header>
     <main>
-        <h1><%= possible.name %> </h1>
+        <section class="showContainer">
+            <h1><%= possible.name %> </h1>
+            <section class="tools">
+                <form  action='/possible/<%= possible[i]._id %>?_method=DELETE' method="POST" style="display:inline; margin-left:16px;">
+                    <input id="x" type="submit" value="X">
+                </form>
+            </section>
         <img class="doggo" id="showDog" src="<%= possible.img %>" alt="my good boi" height="400px"/> <br/>
-        <ul>
+        <ul class="data-display">
             <li>Breed: <%= possible.breed %> </li><br/>
             <li>Age: <%= possible.age %> </li><br/>
             <li>Energy: <%= possible.energy %> /5</li><br/>
@@ -18,6 +24,7 @@
             <li>Doggo Bio: <%= possible.about %> </li><br/>
             <li>Favorite Play Places: <%= possible.locations %> </li><br/>
         </ul>
+        </section>
     </main>
 </body>
 </html>

@@ -5,7 +5,8 @@
 </head>
 <body>
     <header>
-        <nav>
+        <img src="https://document-export.canva.com/-3xos/DAFCdW-3xos/82/thumbnail/0001.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUHWDTJW6UD%2F20220602%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220602T031451Z&X-Amz-Expires=47869&X-Amz-Signature=218505d5589cce024e2303cd02f127afda1469f4564e18808256f3372a222c66&X-Amz-SignedHeaders=host&response-expires=Thu%2C%2002%20Jun%202022%2016%3A32%3A40%20GMT" alt="logo" height="70px" class="logo">
+        <nav class="site-nav">
             <ul>
                 <li>
                     <a href="/">Home</a>
@@ -24,16 +25,16 @@
         </nav>
     </header>
     <main>
-        <section>
-            <h2><%= pets.name %> </h2>
-            <section>
+        <section class="showContainer">
+            <h1><%= pets.name %> </h1>
+            <section class="tools">
                 <a href="/pets/<%= pets._id %>/edit">Edit</a>
-                <form action="/pets/<%= pets._id %>?_method=DELETE" method="POST">
+                <form  action="/pets/<%= pets._id %>?_method=DELETE" method="POST">
                     <input type="submit" value="Delete Pet" />
                 </form>
             </section>
             <img class="doggo" id="showDog" src="<%= pets.img %>" alt="my good boi" height="400px"/> <br/>
-            <ul>
+            <ul class="data-display">
                 <li>Breed: <%= pets.breed %> </li><br/>
                 <li>Age: <%= pets.age %> </li><br/>
                 <li>Energy: <%= pets.energy %> /5</li><br/>

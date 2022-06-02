@@ -1,16 +1,25 @@
+html {
+    width: 100%;
+}
 body {
+    
     background: rgb(240, 244, 245);
     font-family: 'Work Sans', sans-serif;
     font-weight: 300;
 }
 
 .container {
-    width: 95%;
+    width: 97%;
+    max-width: 1000px;
     margin: 0 auto;
+    
 }
 
 header {
-    background: #03989e;
+    background:  #128f95;
+    color:aliceblue;
+    padding: 1em 0;
+    position: relative;
 }
 
 header::after {
@@ -21,32 +30,104 @@ header::after {
 
 .logo {
     float: left;
-    padding: 5px 0;
 }
 
-nav {
-    float: right;
-}
-
-nav ul {
+.site-nav ul {
     margin: 0;
     padding: 0;
+    max-width: 800px;
+    min-width: 500px;
     list-style: none;
+    display: flex;
+    flex-wrap:nowrap;
+    justify-content: space-between;
 }
 
-nav li {
+.site-nav li {
     display: inline-block;
-    margin-left: 70px;
+    margin-left: 8px;
     padding-top: 25px;
 }
 
-nav a {
+.site-nav a {
     color:aliceblue;
     text-decoration: none;
     text-transform: uppercase;
 }
 
-nav a:hover {
+.site-nav a:hover {
     color: rgb(246, 246, 136);
 }
 
+.doggo {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid grey;
+}
+#showDog {
+    width: 300px;
+    height: 300px;
+    border-radius: 30%;
+
+}
+/* .site-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgb(152, 154, 154);
+}
+
+.site-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-nav li {
+    border-bottom: 1px solid grey;
+}
+.site-nav li:last-child {
+    border-bottom: none;
+}
+.site-nav a {
+    color: aliceblue;
+    display: block;
+    padding: 2em 5em;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+}
+.site-nav a:hover,
+.site-nav a:focus {
+    background:#a3e3e4;
+    color: rgb(254, 254, 127);
+}
+
+.menu-toggle {
+    padding: 1em;
+    position: absolute;
+    top: 1.25em;
+    right: 1.5em;
+    cursor: pointer;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    display: block;
+    background: aliceblue;
+    height: 3px;
+    width: 2em;
+    border-radius: 3px;
+}
+
+.hamburger::before {
+    transform: translateY(-7px);
+}
+
+.hamburger::after {
+    transform: translateY(4px);
+} */

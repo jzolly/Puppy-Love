@@ -12,33 +12,36 @@
         <%- include('../partials/nav.ejs') %>
     </header>
     <main>
-        <form action="/pets" method="POST">
-            <h1>Add New Pet</h1>
-            <section class="baseline">
-                Photo:<input type="text" name="img"/><br />
-                Name:<input type="text" name="name" /><br/>
-                Breed:<input type="text" name="breed" /><br/>
-                Age:<input type="number" name="age" /><br/>
-            </section>
-            <hr>
-            <section class="disposition">
-                <label for="energy">Energy Level</label><br/>
-                <span>Low</span>
-                <input type="range" name="energy" id="energy" value="3" min="1" max="5"/>
-                <span>High</span>
-                <br/>
-                Personality: <br />
-                <textarea name="personality"></textarea><br/>
-                Doggo Bio:<br/>
-                <textarea name="about" ></textarea><br/>
-            </section>
-            <hr>
-            <section class="locations">
-                Favorite Play Places <br/>
-                <textarea name="locations"></textarea>
-            </section>
-            <input type="submit" value="Add Pet"/><br/>
-        </form>
+        <div class="form-container">
+            <form action="/pets" method="POST">
+                <h1>Add New Pet</h1>
+                <section class="baseline">
+                    Photo:<input type="text" name="img"/><br />
+                    Name:<input type="text" name="name" /><br/>
+                    Breed:<input type="text" name="breed" /><br/>
+                    Age:<input type="number" name="age" /><br/>
+                </section>
+                <hr>
+                <section class="disposition">
+                    <label for="energy">Energy Level</label><br/>
+                    <span>Low</span>
+                    <input type="range" name="energy" id="energy" value="3" min="1" max="5"/>
+                    <span>High</span>
+                    <br/>
+                    Personality: <br />
+                    <textarea name="personality"></textarea><br/>
+                    Doggo Bio:<br/>
+                    <textarea name="about" ></textarea><br/>
+                </section>
+                <hr>
+                <section class="locations">
+                    Favorite Play Places <br/>
+                    <textarea name="locations"></textarea>
+                </section>
+                <input type="submit" value="Add Pet"/><br/>
+            </form>
+        </div>
+        
     </main>
 </body>
 </html>

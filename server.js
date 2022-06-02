@@ -8,6 +8,8 @@ const possibleController = require('./controllers/possible.js');
 const app = express();
 const morgan = require('morgan');
 require('dotenv').config();
+const Possible = require('./models/possible.js');
+
 
 // Database Configuration
 mongoose.connect(process.env.DATABASE_URL, {
@@ -34,6 +36,7 @@ app.use('/friends', friendsController);
 const Pet = require('./models/pet.js');
 const petSeed = require('./models/possibleSeed.js');
 const Friend = require('./models/friend.js');
+const { $where } = require('./models/pet.js');
 app.get('/seed', (req, res) => {
     Friend.deleteMany({}, (error, friends) => {});
     Pet.deleteMany({}, (error, pets) => {
@@ -46,8 +49,22 @@ app.get('/seed', (req, res) => {
 });
 
 // Landing Page
+// app.get('/', (req, res) => {
+//     res.render('landing.ejs');
+// });
+
 app.get('/', (req, res) => {
-    res.render('landing.ejs');
+    Possible.find({}, (error, allPossible) => {
+        Pet.find({}, (error, allPets) => {
+            Friend.find({}, (error, allFriends) => {
+                res.render('landing.ejs', {
+                   possible: allPossible,
+                   pets: allPets,
+                   friends: allFriends
+                });
+            });
+        });
+    });
 });
 
 // Listeners

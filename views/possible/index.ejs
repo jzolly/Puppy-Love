@@ -9,21 +9,25 @@
         <%- include('../partials/nav.ejs') %>
     </header>
     <main>
-        <h1>Pawsible Friends</h1>
-        <ul>
-            <% for(let i=0; i < possible.length; i++){ %>
-                <li>
-                    <a href="/possible/<%= possible[i]._id %>"><%= possible[i].name %></a> <br/>
-                    <img class="doggo" src="<%= possible[i].img %>" height="200px"/>
-                </li>
-                <form action='/possible/<%= possible[i]._id %>?_method=DELETE' method="POST" style="display:inline; margin-left:16px;">
-                    <input type="submit" value="X">
-                </form>
-                <form action="/possible/<%= possible[i]._id %>/heart" method="POST" style="display:inline; margin-left:16px;">
-                    <button>Heart</button>
-                </form>
-           <% } %> 
-        </ul>
+        <div class="index-container">
+            <h1>Pawsible Friends</h1>
+            <ul>
+                <% for(let i=0; i < possible.length; i++){ %>
+                    <li>
+                        <a href="/possible/<%= possible[i]._id %>"><%= possible[i].name %></a> <br/>
+                        <img class="doggo" src="<%= possible[i].img %>" height="200px"/>
+                    </li>
+                    <section class="tools">
+                        <form action='/possible/<%= possible[i]._id %>?_method=DELETE' method="POST" style="display:inline; margin-left:16px;">
+                            <input id="x" type="submit" value="X">
+                        </form>
+                        <form id="heart" action="/possible/<%= possible[i]._id %>/heart" method="POST" style="display:inline; margin-left:16px;">
+                            <button>Heart</button>
+                        </form>
+                    </section>
+               <% } %> 
+            </ul></div>
+        
     </main>
 </body>
 </html>

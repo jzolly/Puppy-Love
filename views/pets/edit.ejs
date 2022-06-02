@@ -9,7 +9,8 @@
         <%- include('../partials/nav.ejs') %>
     </header>
     <main>
-        <h1>Edit Pet</h1>
+        <div class="form-container">
+            <h1>Edit Pet</h1>
         <form action="/pets/<%= pet._id %>?_method=PUT" method="POST">
             <section class="baseline">
                 Photo:<input type="text" name="img" value="<%= pet.img%>"/><br />
@@ -36,6 +37,8 @@
             </section>
             <input type="submit" value="Update Pet"/><br/>
         </form>
+        </div>
+        
     </main>
 </body>
 </html>
