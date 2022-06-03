@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('../partials/indexHead.ejs') %> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../style.css">
 </head>
 <body>
     <header>
@@ -9,21 +12,23 @@
     </header>
     <main>
         <div class="index-container">
-            <h1>Fuzzy Friends</h1>
-        <a href="/possible"><button>Find Friends</button></a>
-        <ul class="pet-display">
-            <% for(let i=0; i < friends.length; i++){ %>
-                <li>
-                    <a href="/friends/<%= friends[i]._id %>"><%= friends[i].name %></a> <br/>
-                    <img  class="doggo" src="<%= friends[i].img %>" height="200px"/>
-                    <section class="tools">
-                        <form action="/friends/<%= friends._id %>?_method=DELETE" method="POST">
-                            <input id="x" type="submit" value="Delete Friend" />
-                        </form>
-                    </section>
+            <div class="top-display">
+                <h1>Fuzzy Friends</h1>
+                <a href="/possible"><button id="find-friend">Find More Friends</button></a>
+            </div>
+            <ul class="pet-display">
+                <% for(let i=0; i < friends.length; i++){ %>
+                    <li>
+                        <a href="/friends/<%= friends[i]._id %>"><%= friends[i].name %></a> <br/>
+                        <img  class="doggo" src="<%= friends[i].img %>" height="200px"/>
+                        <section class="tools">
+                            <form action="/friends/<%= friends[i]._id %>?_method=DELETE" method="POST">
+                                <input id="x" type="submit" value="X" />
+                            </form>
+                        </section>
                 </li>
-           <% } %> 
-        </ul>
+                <% } %> 
+            </ul>
         </div>
         
     </main>

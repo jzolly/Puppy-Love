@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('../partials/indexHead.ejs') %> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../style.css">
     <title>Possible Friends</title>
 </head>
 <body>
@@ -20,8 +23,8 @@
                             <form action='/possible/<%= possible[i]._id %>?_method=DELETE' method="POST" style="display:inline; margin-left:16px;">
                                 <input id="x" type="submit" value="X">
                             </form>
-                            <form id="heart" action="/possible/<%= possible[i]._id %>/heart" method="POST" style="display:inline; margin-left:16px;">
-                                <button>Heart</button>
+                            <form  action="/possible/<%= possible[i]._id %>/heart" method="POST" style="display:inline; margin-left:16px;">
+                                <button id="heart"><img src="https://www.freeiconspng.com/uploads/facebook-blank-heart-png-9.png"  height="40px" alt="heart button"></button>
                             </form>
                         </section>
                     </li>

@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('../partials/formHead.ejs') %> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="/style.css">
     <title>Edit Pet</title>
 </head>
 <body>
@@ -10,7 +13,9 @@
     </header>
     <main>
         <div class="form-container">
-            <h1>Edit Pet</h1>
+            <div class="form-title">
+               <h1>Edit Pet</h1> 
+            </div>
         <form action="/pets/<%= pet._id %>?_method=PUT" method="POST">
             <section class="baseline">
                 Photo:<input type="text" name="img" value="<%= pet.img%>"/><br />

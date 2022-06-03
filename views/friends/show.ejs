@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('../partials/showHead.ejs') %> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../style.css">
 </head>
 <body>
     <header>
@@ -12,7 +15,7 @@
             <h1><%= friends.name %> </h1>
             <section class="tools">
                 <form action="/friends/<%= friends._id %>?_method=DELETE" method="POST">
-                    <input id="x" type="submit" value="Delete Friend" />
+                    <input type="submit" value="Delete Friend" />
                 </form>
             </section>
             <img class="doggo" id="showDog" src="<%= friends.img %>" alt="my good boi" height="400px"/> <br/>

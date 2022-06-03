@@ -2,7 +2,8 @@ html {
     width: 100%;
 }
 body {
-    
+    width: 100%;
+    margin: 0;
     background: rgb(240, 244, 245);
     font-family: 'Work Sans', sans-serif;
     font-weight: 300;
@@ -19,7 +20,9 @@ header {
     background:  #128f95;
     color:aliceblue;
     padding: 1em 0;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 header::after {
@@ -36,11 +39,12 @@ header::after {
     margin: 0;
     padding: 0;
     max-width: 800px;
-    min-width: 500px;
+    min-width: 350px;
     list-style: none;
     display: flex;
     flex-wrap:nowrap;
     justify-content: space-between;
+    overflow: scroll;
 }
 
 .site-nav li {
@@ -66,6 +70,7 @@ header::after {
     overflow: hidden;
     border-radius: 25%;
     border: 3px solid grey;
+    align-items: center;
 }
 #showDog {
     width: 300px;
@@ -80,99 +85,117 @@ header::after {
 h1 {
     color:#0e5d61; 
 }
-
+/* Buttons */
+.tools {
+    display: flex;
+    justify-content: space-between;
+}
+#x {
+    font-size: 25px;
+    background: none;
+    color: red;
+    border: 3px solid red;
+    border-radius: 50%;
+    margin: 1px 1px;
+    float: left;
+    text-decoration: none;
+    display: inline-block;
+}
+#heart {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
 /* .index-container */
 .index-container {
     position: relative;
-    overflow: scroll;
+    /* overflow: scroll; */
+}
+#btnNew {
+    margin:16px;
+}
+#find-friend {
+    display: inline;
 }
 /* Pet Container */
 .pet-display {
     background:white;
-    max-width: 800px;
-    min-width: 500px;
+    /* max-width: 800px;
+    min-width: 100px;
     max-height: 600px;
-    min-height: 300px;
-    margin:;
-    padding:;
-    border:2px solid orange;
-    border-radius: ;
+    min-height: 100px; */
+    /* margin:; */
+    /* padding:; */
+    /* border:2px solid orange; */
+    /* border-radius: ; */
+    display: flex;
+    flex-wrap: wrap;
     list-style: none;
     position: relative;
-    overflow: scroll;
+    /* overflow: scroll; */
 }
 .pet-display ul {
+    list-style: none;
 }
 .pet-display li {
-    background: rgb(154, 152, 152);
-    border:2px solid red;
-    width: 300px;
-    height: 300px;
-    margin: 1px 0;
-    padding: 1px 0;
+    background: #c5dddf;
+    box-shadow: 1px rgb(147, 143, 143);
+    border:2px solid rgb(203, 203, 203);
+    border-radius: 5%;
+    /* width: 300px;
+    height: 305px; */
+    margin-right: 16px;
+    margin-bottom: 16px;
+    padding: 16px;
+    
     
 }
 .pet-display a {
+    color:#0e5d61;
     text-decoration: none;
     text-transform: uppercase;
-}
 
-/* .site-nav {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: rgb(152, 154, 154);
 }
+.pet-display a:hover {
+    text-shadow:2px 2px rgb(232, 232, 138);
+}
+/* show container */
+.showContainer {
+    width: 90vw;
+    margin: 50px auto;
+    /* display: flex; */
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #ddd,
+              -1px -1px 10px #ddd,
+              1px -1px 10px #ddd,
+              -1px 1px 10px #ddd;
 
-.site-nav ul {
-    margin: 0;
-    padding: 0;
+}
+#showDog {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+#showDog img {
+    align-items: center;
+}
+.data-display {
     list-style: none;
 }
+/* form */
+.form-container {
+    background: rgb(138, 137, 137);
+    width: 80vw;
+    margin: 50px auto;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #ddd,
+              -1px -1px 10px #ddd,
+              1px -1px 10px #ddd,
+              -1px 1px 10px #ddd;
+}
+.form-title {
+    width: 50%;
 
-.site-nav li {
-    border-bottom: 1px solid grey;
-}
-.site-nav li:last-child {
-    border-bottom: none;
-}
-.site-nav a {
-    color: aliceblue;
-    display: block;
-    padding: 2em 5em;
-    text-transform: uppercase;
-    text-decoration: none;
-    text-align: center;
-}
-.site-nav a:hover,
-.site-nav a:focus {
-    background:#a3e3e4;
-    color: rgb(254, 254, 127);
-}
 
-.menu-toggle {
-    padding: 1em;
-    position: absolute;
-    top: 1.25em;
-    right: 1.5em;
-    cursor: pointer;
 }
-
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-    content: '';
-    display: block;
-    background: aliceblue;
-    height: 3px;
-    width: 2em;
-    border-radius: 3px;
-}
-
-.hamburger::before {
-    transform: translateY(-7px);
-}
-
-.hamburger::after {
-    transform: translateY(4px);
-} */
