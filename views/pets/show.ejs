@@ -23,22 +23,21 @@
                 <li>
                     <a href="/possible">Pawsible Friends</a>
                 </li>
-                <li><a href="/pets/new">Add Pet</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section class="showContainer">
             <h1><%= pets.name %> </h1>
+            <div id="showDog" >
+                <img class="doggo" src="<%= pets.img %>" alt="my good boi" height="400px"/>
+            </div>
             <section class="tools-show">
                 <a href="/pets/<%= pets._id %>/edit">Edit</a>
                 <form  action="/pets/<%= pets._id %>?_method=DELETE" method="POST">
                     <input type="submit" value="Delete Pet" />
                 </form>
             </section>
-            <div id="showDog" >
-                <img class="doggo" src="<%= pets.img %>" alt="my good boi" height="400px"/>
-            </div>
             <ul class="data-display">
                 <li>Breed: <%= pets.breed %> </li><br/>
                 <li>Age: <%= pets.age %> </li><br/>
