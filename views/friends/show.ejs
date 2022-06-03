@@ -13,12 +13,14 @@
     <main>
         <section class="showContainer">
             <h1><%= friends.name %> </h1>
-            <section class="tools">
+            <div id="showDog">
+                <img class="doggo" src="<%= friends.img %>" alt="my good boi" height="400px"/>
+            </div>
+            <section id="delete-friend">
                 <form action="/friends/<%= friends._id %>?_method=DELETE" method="POST">
-                    <input type="submit" value="Delete Friend" />
+                    <input id="shwInp" type="submit" value="Unfriend" />
                 </form>
             </section>
-            <img class="doggo" id="showDog" src="<%= friends.img %>" alt="my good boi" height="400px"/> <br/>
             <ul class="data-display">
                 <li>Breed: <%= friends.breed %> </li><br/>
                 <li>Age: <%= friends.age %> </li><br/>

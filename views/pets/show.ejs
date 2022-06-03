@@ -12,13 +12,13 @@
         <nav class="site-nav">
             <ul>
                 <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="/friends">Furever Friends</a>
+                    <a href="/">My Profile</a>
                 </li>
                 <li>
                     <a href="/pets">Pets</a>
+                </li>
+                <li>
+                    <a href="/friends">Furever Friends</a>
                 </li>
                 <li>
                     <a href="/possible">Pawsible Friends</a>
@@ -35,7 +35,7 @@
             <section class="tools-show">
                 <a href="/pets/<%= pets._id %>/edit">Edit</a>
                 <form  action="/pets/<%= pets._id %>?_method=DELETE" method="POST">
-                    <input type="submit" value="Delete Pet" />
+                    <input id="shwDltInp" type="submit" value="Delete Pet" />
                 </form>
             </section>
             <ul class="data-display">

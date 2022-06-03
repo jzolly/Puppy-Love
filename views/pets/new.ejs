@@ -16,31 +16,40 @@
             <div class="form-title">
                 <h1>Add Pet</h1>
             </div>
-            <form action="/pets" method="POST">
-                <section class="baseline">
-                    Photo:<input type="text" name="img"/><br />
-                    Name:<input type="text" name="name" /><br/>
-                    Breed:<input type="text" name="breed" /><br/>
-                    Age:<input type="number" name="age" /><br/>
-                </section>
+            <form class="scroll" action="/pets" method="POST">
+                <fieldset class="baseline">
+                    <legend>BASIC PET INFORMATION</legend>
+                    <label for="img">Photo:</label>
+                    <input id="input-form" type="text" name="img"/><br />
+                    <label for="name">Name:</label>
+                    <input id="input-form" type="text" name="name" /><br/>
+                    <label for="breed">Breed:</label> 
+                    <input id="input-form" type="text" name="breed" /><br/>
+                    <label for="age">Age:</label> 
+                    <input id="input-form" type="number" name="age" /><br/>
+                </fieldset>
                 <hr>
-                <section class="disposition">
+                <fieldset class="disposition">
+                    <legend>DOGGO VIBES</legend>
                     <label for="energy">Energy Level</label><br/>
-                    <span>Low</span>
-                    <input type="range" name="energy" id="energy" value="3" min="1" max="5"/>
-                    <span>High</span>
+                    <div id="slider">
+                        <span>Low</span>
+                        <span>High</span>
+                    </div>
+                    <input id="input-form" type="range" name="energy" id="energy" value="3" min="1" max="5"/>
                     <br/>
-                    Personality: <br />
+                    <label for="personality">Personality: </label><br />
                     <textarea name="personality"></textarea><br/>
-                    Doggo Bio:<br/>
+                    <label for="about"> Doggo Bio:</label><br/>
                     <textarea name="about" ></textarea><br/>
-                </section>
+                </fieldset>
                 <hr>
-                <section class="locations">
-                    Favorite Play Places <br/>
+                <fieldset class="locations">
+                    <legend>PLAY ZONES</legend>
+                    <label for="locations">Favorite Places </label><br/>
                     <textarea name="locations"></textarea>
-                </section>
-                <input type="submit" value="Add Pet"/><br/>
+                </fieldset>
+                <input id="input-form" type="submit" value="Add Pet"/><br/>
             </form>
         </div>
         
