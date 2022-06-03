@@ -1,6 +1,12 @@
 # Puppy-Love
 This full CRUD project highlights my skills using MongoDB, node.JS, Express, HTML. The goals is to present a concept for an app that will supply a lowkey atmostphere for dog owners to meet new people in the context of playdate meetups when they mmatch with other dog owners. 
 
+## User Story
+User will be able to...
+- Make valuable connections to arrange meetups with other dog owners in their area
+- Add, edit and delete their dogs photo and stats to Puppy Love database
+- Find, friend and unfriend dogs according to perceived campatability with their own pet
+
 ## Technologies Used
 - EJS(HTML)
 - CSS3
