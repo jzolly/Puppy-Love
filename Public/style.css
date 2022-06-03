@@ -15,7 +15,7 @@ body {
 .container {
     width: 97%;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 0;
     
 }
 
@@ -27,7 +27,7 @@ header {
     top: 0;
     z-index: 1;
 }
-
+x
 header::after {
     content: '';
     display: table;
@@ -36,6 +36,7 @@ header::after {
 
 .logo {
     float: left;
+    margin-left: 15px;
 }
 
 .site-nav ul {
@@ -156,6 +157,9 @@ h1 {
     flex-wrap: wrap;
     list-style: none;
     position: relative;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 0 5%;
 }
 .pet-display ul {
     list-style: none;
@@ -167,8 +171,7 @@ h1 {
     border-radius: 5%;
     /* width: 300px;
     height: 305px; */
-    margin-right: 16px;
-    margin-bottom: 16px;
+    margin: 16px;
     padding: 16px;
 }
 .pet-display a {
